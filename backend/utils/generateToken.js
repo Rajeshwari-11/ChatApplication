@@ -10,7 +10,7 @@ res.cookie("jwt",token,{
     maxAge: 15* 24* 60 *60 *1000,//ms
     httpOnly: true,//prevent xss attackes cross-site scripting attacks
     samesite: "strict", //CSRF attacks cross-site request forgery attacks
-    secure: process.env.NoDE_ENV !== "development",
+    secure: process.env.NODE_ENV !== "development",
 });
 };
 
